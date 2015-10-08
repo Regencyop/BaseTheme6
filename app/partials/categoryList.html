@@ -1,0 +1,33 @@
+<style>
+nav {
+    width: 80%;
+    clear: both;
+    margin: auto;
+}
+
+div nav ul {
+    text-align: center;
+}
+
+.nav ul li {
+    display: inline-block;
+    padding: 0;
+    float: none;
+}
+
+</style>
+<div class="panel-category-list no-panels" ng-show="currentCategory.SubCategories.length">
+    <customcarousel></customcarousel>
+    <loadingindicator ng-show="categoryLoadingIndicator" title="{{'Please wait while we fetch all categories' | r | xlat}}" />
+    <nav class="nav 451_lbl_subcatlist">
+        <ul>
+            <li class="col-lg-3 col-md-3 col-sm-4 col-xs-4" ng-repeat="c in currentCategory.SubCategories">
+                <div class="well image-bg" style="background-image:url({{c.Image.URL}});">
+                    <a ng-href="catalog/{{c.InteropID}}">
+                    </a>
+                </div>
+                <h4 ng-bind-html="c.Name" />
+            </li>
+        </ul>
+    </nav>
+</div>
