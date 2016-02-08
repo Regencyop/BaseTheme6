@@ -1,1 +1,9 @@
-/*do not make changes to this file. It will be overwritten by the css editor. Put theme changes in custom.css*/
+/* DO NOT EDIT CSS IN HERE, THIS IS FOR GLOBAL BASETHEME CHANGES */
+
+    customtextfield[customfield="Variant.Specs.ProductImage"] {
+        display:none;
+    }
+    
+    customtextfield[customfield="Variant.Specs.Weight"] {
+        display:none;
+    }
